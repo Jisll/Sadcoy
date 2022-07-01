@@ -23,5 +23,3 @@ https://github.com/Jisll/sadcoy/releases
 
 * .NET Framework 4.8
 * Compatible with Windows 10 / 11
-
-<hr>
