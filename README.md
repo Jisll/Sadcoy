@@ -1,4 +1,3 @@
-# Sadcoy-Optimizer
 <p align="center">
 		<img src="https://cdn.discordapp.com/attachments/927291995947413515/992529939897274498/Screenshot_1.png">
 	</a>
