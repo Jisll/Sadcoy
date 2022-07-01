@@ -18,6 +18,7 @@ Sadcoy is designed to improve performance and latency in games to enhance your g
 https://github.com/Jisll/sadcoy/releases
 
 <hr>
+
 ### 💻 Compatibility: ###
 
 * .NET Framework 4.8
