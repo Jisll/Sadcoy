@@ -21,12 +21,12 @@ This software is still under development, many features will be added, if you ha
 ## 🏗️ What does it do?
 
 ## 💧Optimizes Privacy Settings
-- Telemtrys
+- Telemetry
 - Feedback
 - Location
 ## 💧Optimizes Gaming Settings
 - Visual Effects
-- PowerThrottling
+- Throttling
 - GameDVR
 ## 💧Optimizes Taskbar and Menu
 - Most Apps
