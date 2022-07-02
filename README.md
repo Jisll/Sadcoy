@@ -20,7 +20,21 @@ This software is still under development, many features will be added, if you ha
 
 ## 🏗️ What does it do?
 
-- It will only disable functions with the registry editor, which will improve the PC's performance or run various programs more smoothly! 
+*Optimizes Privacy Settings
+- Telemtrys
+- Feedback
+- Location
+*Optimizes Gaming Settings
+- Visual Effects
+- PowerThrottling
+- GameDVR
+*Optimizes Taskbar and Menu
+- Most Apps
+- More Apps on Start Menu
+* Optimizes System Settings
+- Delays
+- Menu
+- Removes Watermark (Windows 11)
 
 <hr>
 
