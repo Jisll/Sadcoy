@@ -27,4 +27,5 @@ https://github.com/Jisll/sadcoy/releases
 <hr>
 
 ### ⚠️ DONT STEAL ###
-This project must not be stolen or used for other projects! For a use of this project makes an issue!
+
+* This project must not be stolen or used for other projects! For a use of this project makes an issue!
