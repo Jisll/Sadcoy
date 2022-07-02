@@ -15,7 +15,16 @@ This software is still under development, many features will be added, if you ha
 <hr>
 
 ## 🏗️ What does it do?
+
 - It will only disable functions with the registry editor, which will improve the PC's performance or run various programs more smoothly! 
+
+<hr>
+
+## 🔍 How can you help me?
+
+- Find new performance tweaks and send them in via pull request.
+- Share this Github profile to direct more to this software.
+- Find bugs and send them to me via issue.
 
 <hr>
 
