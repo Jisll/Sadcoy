@@ -4,7 +4,7 @@
 This software is still under development, many features will be added, if you have any ideas write us! Support and more is appreciated, any help will help us to develop this app further.
 
 <p align="center">
-		<img src="https://cdn.discordapp.com/attachments/927291995947413515/992668519231651850/sadcoyoptimizer.png">
+		<img src="https://cdn.discordapp.com/attachments/927291995947413515/992668664824336414/sadcoyoptimizer.png">
 	</a>
 </p> 
 
