@@ -14,6 +14,11 @@ This software is still under development, many features will be added, if you ha
 
 <hr>
 
+## 🏗️ What does it do?
+- It will only disable functions with the registry editor, which will improve the PC's performance or run various programs more smoothly! 
+
+<hr>
+
 ### ⬇️ Downloads: ###
 https://github.com/Jisll/sadcoy/releases
 
