@@ -45,4 +45,5 @@ https://github.com/Jisll/sadcoy/releases
 
 ## ⚠️ DONT STEAL
 
-* This project must not be stolen or used for other projects! For a use of this project makes an issue!
+* This project is not allowed to steal or use for other projects! For a use of this project open an issue!
+
