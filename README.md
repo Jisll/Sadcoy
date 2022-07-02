@@ -3,7 +3,7 @@
 	</a>
 </p> 
 
-### ℹ️ Summary: ###
+## ℹ️ Summary:
 
 Sadcoy is a simple made 1-click optimizer and open-source project! it is designed to improve performance and latency in games and enhance your gaming experience.
 This software is still under development, many features will be added, if you have any ideas write us! Support and more is appreciated, any help will help us to develop this app further.
@@ -19,18 +19,18 @@ This software is still under development, many features will be added, if you ha
 
 <hr>
 
-### ⬇️ Downloads: ###
+## ⬇️ Downloads:
 https://github.com/Jisll/sadcoy/releases
 
 <hr>
 
-### 💻 Compatibility: ###
+## 💻 Compatibility:
 
 * .NET Framework 4.8
 * Compatible with Windows 10 / 11
 
 <hr>
 
-### ⚠️ DONT STEAL ###
+## ⚠️ DONT STEAL
 
 * This project must not be stolen or used for other projects! For a use of this project makes an issue!
