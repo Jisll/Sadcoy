@@ -1,4 +1,4 @@
-﻿<Window x:Class="Sadcoy.MainWindow"
+<Window x:Class="Sadcoy.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -544,7 +544,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="© 2022 Sadcoy, Inc"/><Run Language="de-de" Text="."/></TextBlock>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="126" Foreground="#19A5A5A5" FontFamily="Segoe UI Variable Text Semibold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="578,383,0,0" Text="Sadcoy Optimizer v0.0.3" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="126" Foreground="#19A5A5A5" FontFamily="Segoe UI Variable Text Semibold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="578,383,0,0" Text="Sadcoy Optimizer v0.0.4" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
