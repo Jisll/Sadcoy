@@ -5,8 +5,8 @@
 
 ### ℹ️ Summary: ###
 
-Sadcoy is designed to improve performance and latency in games and enhance your gaming experience.
-This software is still under development, many features will be added, if you have any ideas feel free to write us! Support and more will be appreciated, any help will help us to develop this app further.
+Sadcoy is a simple made 1-click optimizer and open-source project! it is designed to improve performance and latency in games and enhance your gaming experience.
+This software is still under development, many features will be added, if you have any ideas write us! Support and more is appreciated, any help will help us to develop this app further.
 
 * Speed up your system and network performance
 * Disable unnecessary Windows Functions
