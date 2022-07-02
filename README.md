@@ -14,6 +14,7 @@ This software is still under development, many features will be added, if you ha
 * Speed up your system and network performance
 * Disable unnecessary Windows Functions
 * Disable Windows telemetry, Cortana and many more
+* Cleaning Temp Files
 
 <hr>
 
