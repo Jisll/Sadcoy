@@ -20,18 +20,18 @@ This software is still under development, many features will be added, if you ha
 
 ## 🏗️ What does it do?
 
-*Optimizes Privacy Settings
+##💧Optimizes Privacy Settings
 - Telemtrys
 - Feedback
 - Location
-*Optimizes Gaming Settings
+##💧Optimizes Gaming Settings
 - Visual Effects
 - PowerThrottling
 - GameDVR
-*Optimizes Taskbar and Menu
+##💧Optimizes Taskbar and Menu
 - Most Apps
 - More Apps on Start Menu
-* Optimizes System Settings
+##💧Optimizes System Settings
 - Delays
 - Menu
 - Removes Watermark (Windows 11)
