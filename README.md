@@ -24,5 +24,7 @@ https://github.com/Jisll/sadcoy/releases
 * .NET Framework 4.8
 * Compatible with Windows 10 / 11
 
+<hr>
+
 ### ⚠️ DONT STEAL ###
 This project must not be stolen or used for other projects! For a use of this project makes an issue!
