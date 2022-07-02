@@ -1,7 +1,0 @@
-﻿[*.cs]
-
-# CS8602: Dereference of a possibly null reference.
-dotnet_diagnostic.CS8602.severity = none
-
-# CS0414: The field 'Program._alreadyRunningMsg' is assigned but its value is never used
-dotnet_diagnostic.CS0414.severity = none
