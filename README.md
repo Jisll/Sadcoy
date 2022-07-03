@@ -56,7 +56,7 @@ This software is still under development, many features will be added, if you ha
 <hr>
 
 ## ⬇️ Downloads:
-https://github.com/Jisll/sadcoy/releases
+- https://github.com/Jisll/sadcoy/releases
 
 <hr>
 
