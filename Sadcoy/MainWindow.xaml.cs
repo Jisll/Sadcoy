@@ -80,10 +80,5 @@ namespace Sadcoy
                 UseShellExecute = true
             });
         }
-
-        private void About_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
