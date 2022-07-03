@@ -38,7 +38,7 @@ This software is still under development, many features will be added, if you ha
 
 <hr>
 
-## 🧠 What is important to me?
+## 🧠 What is important for the Optimizer?
 
 - I put a lot of skill in the optimizer, it should modify the operating system via registry so that it is nicer and smoother to use. The design of the optimizer should be beautiful and good to look at.
 - Only registries that are safe and do not destroy the operating system should be used.
