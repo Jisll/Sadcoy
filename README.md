@@ -40,7 +40,8 @@ This software is still under development, many features will be added, if you ha
 
 ## 🧠 What is important for the Optimizer?
 
-- I put a lot of skill in the optimizer, it should modify the operating system via registry so that it is nicer and smoother to use. The design of the optimizer should be beautiful and good to look at.
+- I put a lot of skill in the optimizer, it should modify the operating system via registry so that it is nicer and smoother to use. 
+- The design of the optimizer should be beautiful and good to look at.
 - Only registries that are safe and do not destroy the operating system should be used.
 - A lot of emphasis is also placed on the code, it should not be messy but fancy so that everything is understood.
 
