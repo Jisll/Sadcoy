@@ -7,16 +7,6 @@
         mc:Ignorable="d"
         Title="Sadcoy" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <!--<Style x:Key="lblDesign" TargetType="Label">
-            <Setter Property="FontFamily" Value="fonts/moon.otf #moon"/>
-        </Style>
-
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="25"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="DarkGray"/>
-            <Setter Property="FontFamily" Value="fonts/bradhitc.ttf #Bradley Hand ITC"/>
-        </Style>-->
         <Style TargetType="{x:Type Button}" x:Key="SupportMeHover">
             <Setter Property="Background" Value="#d82242"/>
             <Setter Property="Foreground" Value="White"/>
