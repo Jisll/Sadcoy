@@ -5,7 +5,7 @@ This software is still under development, many features will be added, if you ha
 
 ### ⚠️ INSTALL REQUIRED ###
 
-* This project uses the font  ["Poppins-Semibold"](https://github.com/Jisll/Sadcoy/tree/main/Sadcoy/fonts) to get a better design of the optimizer install it!
+* This project uses the font  [Poppins-Semibold](https://github.com/Jisll/Sadcoy/tree/main/Sadcoy/fonts) click to install it for a better experience.
 
 <p align="center">
 		<img src="https://cdn.discordapp.com/attachments/927291995947413515/992668664824336414/sadcoyoptimizer.png">
