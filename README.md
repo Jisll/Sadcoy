@@ -14,7 +14,8 @@ This software is still under development, many features will be added, if you ha
 
 <hr>
 
-## ⛱️ Support my Work! [Click here to support me!](https://link-center.net/161230/support-me)
+## ⛱️ Support my Work!
+* [Click here to support me!](https://link-center.net/161230/support-me)
 
 <hr>
 
