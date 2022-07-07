@@ -11,6 +11,7 @@ This software is still under development, many features will be added, if you ha
 		<img src="https://cdn.discordapp.com/attachments/927291995947413515/993619660832518145/sadcoyoptimizer.png">
 	</a>
 </p> 
+## ⛱️ Support my Work! [Click here to support me!](https://link-center.net/161230/support-me)
 
 ## ℹ️ Summary:
 
