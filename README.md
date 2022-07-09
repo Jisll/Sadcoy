@@ -8,7 +8,7 @@ This software is still under development, many features will be added, if you ha
 * This project uses the font  [Poppins-Semibold](https://cdn.discordapp.com/attachments/927291995947413515/993565082103599115/Poppins-SemiBoldItalic.ttf) click to install it for a better experience.
 
 <p align="center">
-		<img src="https://cdn.discordapp.com/attachments/927291995947413515/993619660832518145/sadcoyoptimizer.png">
+		<img src="https://cdn.discordapp.com/attachments/927291995947413515/995328098776129546/sadcoyoptimizer.png">
 	</a>
 </p> 
 
