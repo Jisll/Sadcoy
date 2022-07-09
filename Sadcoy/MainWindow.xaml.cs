@@ -63,22 +63,16 @@ namespace Sadcoy
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+            => this.Close();
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
+            => this.DragMove();
 
         private void SupportMe_Click(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start(new ProcessStartInfo
+            => System.Diagnostics.Process.Start(new ProcessStartInfo
             {
                 FileName = "https://github.com/Jisll/Sadcoy",
                 UseShellExecute = true
             });
-        }
     }
 }
