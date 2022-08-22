@@ -1,4 +1,4 @@
-# 👋 Introducing `Sadcoy`
+# 👋 Introducing `Sadcoy` https://img.shields.io/github/downloads/jisll/Sadcoy/total.svg?style=for-the-badge&logo=appveyor
 
 `Sadcoy` is a simple made 1-click optimizer and open-source project! it is designed to improve performance and latency in games and enhance your gaming experience.
 This software is still under development, many features will be added, if you have any ideas write us! Support and more is appreciated, any help will help us to develop this app further.
