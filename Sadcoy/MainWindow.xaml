@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:Sadcoy"
         mc:Ignorable="d"
         Title="Sadcoy" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="CenterScreen">
+
     <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="ConvertNormal">
+            <Setter Property="Background" Value="#d82242"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="5,5,5,5" Background="{TemplateBinding Background}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation To="#FF131313"
+                                    Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" Duration="0:0:0.25" AutoReverse="False" RepeatBehavior="1x"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation
+                                    Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" Duration="0:0:0.25" AutoReverse="False" RepeatBehavior="1x"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style TargetType="{x:Type Button}" x:Key="SupportMeHover">
             <Setter Property="Background" Value="#d82242"/>
             <Setter Property="Foreground" Value="White"/>
@@ -243,23 +280,6 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Exit">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
@@ -380,8 +400,33 @@
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="StarMeAnimationBegin">
@@ -505,12 +550,70 @@
                 </EasingThicknessKeyFrame>
             </ThicknessAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="convertnormalanimationstart">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="button">
+                <EasingColorKeyFrame KeyTime="0" Value="#19A5A5A5">
+                    <EasingColorKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingColorKeyFrame.EasingFunction>
+                </EasingColorKeyFrame>
+                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#1900E8FF">
+                    <EasingColorKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingColorKeyFrame.EasingFunction>
+                </EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="convernormalanimationend">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="button">
+                <EasingColorKeyFrame KeyTime="0" Value="#1900E8FF">
+                    <EasingColorKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingColorKeyFrame.EasingFunction>
+                </EasingColorKeyFrame>
+                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#19A5A5A5">
+                    <EasingColorKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingColorKeyFrame.EasingFunction>
+                </EasingColorKeyFrame>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="5">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource Startup}"/>
             <BeginStoryboard x:Name="TextBlockAnimationEnter_BeginStoryboard" Storyboard="{StaticResource TextBlockAnimationEnter}"/>
             <BeginStoryboard x:Name="TextBlockAnimationLeave_BeginStoryboard" Storyboard="{StaticResource TextBlockAnimationLeave}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button">
+            <BeginStoryboard x:Name="convertnormalanimationstart_BeginStoryboard" Storyboard="{StaticResource convertnormalanimationstart}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="button">
+            <BeginStoryboard x:Name="convernormalanimationend_BeginStoryboard" Storyboard="{StaticResource convernormalanimationend}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="SupportMe">
             <BeginStoryboard x:Name="StarMeAnimationBegin_BeginStoryboard1" Storyboard="{StaticResource StarMeAnimationBegin}"/>
@@ -548,7 +651,7 @@
                 <DropShadowEffect ShadowDepth="0" RenderingBias="Quality" BlurRadius="10" Color="#FF131313"/>
             </Border.Effect>
         </Border>
-        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="RunSw" Margin="300,318,300,88" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" FontSize="14" FontFamily="Poppins SemiBold" Click="RunSw_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="RUN OPTIMIZER" Cursor="Hand">
+        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="RunSw" Margin="300,318,300,88" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" FontSize="14" FontFamily="Yu Gothic UI Semibold" Click="RunSw_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="RUN OPTIMIZER" Cursor="Hand">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -558,7 +661,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="146" Width="244" Foreground="#FFA5A5A5" FontFamily="Poppins SemiBold" FontSize="14" TextAlignment="Center" FontWeight="Normal" Margin="278,150,278,0" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="146" Width="244" Foreground="#FFA5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="14" TextAlignment="Center" FontWeight="Normal" Margin="278,150,278,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -567,7 +670,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="Sadcoy is designed to improve performance and latency in games to enhance your gaming experience."/><LineBreak/><Run Text="This is an early alpha version, we are open for improvements and suggestions."/></TextBlock>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="WELCOME TO SADCOY" VerticalAlignment="Top" Height="31" Width="244" Foreground="White" FontSize="20" Margin="278,98,278,0" FontWeight="Normal" TextAlignment="Center" FontFamily="Poppins SemiBold" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="WELCOME TO SADCOY" VerticalAlignment="Top" Height="31" Width="244" Foreground="White" FontSize="20" Margin="278,98,278,0" FontWeight="Normal" TextAlignment="Center" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -577,7 +680,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="109" Foreground="#19A5A5A5" FontFamily="Poppins SemiBold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="96,383,0,0" RenderTransformOrigin="0.66,-0.147">
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="109" Foreground="#19A5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="96,383,0,0" RenderTransformOrigin="0.66,-0.147">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -586,16 +689,6 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="© 2022 Sadcoy, Inc"/><Run Language="de-de" Text="."/></TextBlock>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="138" Foreground="#19A5A5A5" FontFamily="Poppins SemiBold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="566,383,0,0" Text="Sadcoy Optimizer v0.0.9" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
         <Button Style="{DynamicResource ExitButton}" x:Name="Exit" Content="&#xF13D;" Margin="690,44,85,0" VerticalAlignment="Top" Height="26" Foreground="#FF444444" BorderBrush="{x:Null}" Background="#FF131313" FontFamily="Segoe Fluent Icons" FontSize="24" Click="Exit_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -606,7 +699,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="100" Foreground="#19A5A5A5" FontFamily="Poppins SemiBold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="96,50,0,0" RenderTransformOrigin="0.66,-0.147">
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="80" Foreground="#19A5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="96,50,0,0" RenderTransformOrigin="0.66,-0.147">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -615,7 +708,17 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="SADCOY"/><Run Language="de-de" Text=" [BETA]"/></TextBlock>
-        <Button Style="{DynamicResource SupportMeHover}" x:Name="SupportMe" Content="Star Me!" HorizontalAlignment="Left" Margin="634,48,0,0" VerticalAlignment="Top" Background="#FF131313" BorderBrush="{x:Null}" Foreground="#FF444444" FontFamily="Poppins SemiBold" Click="SupportMe_Click" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
+        <Button Style="{DynamicResource SupportMeHover}" x:Name="SupportMe" Content="Star Me!" HorizontalAlignment="Left" Margin="634,48,0,0" VerticalAlignment="Top" Background="#FF131313" BorderBrush="{x:Null}" Foreground="#FF444444" FontFamily="Yu Gothic UI Semibold" Click="SupportMe_Click" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="button" Style="{DynamicResource ConvertNormal}" Content="Convert to Standard" HorizontalAlignment="Left" Margin="590,381,0,0" VerticalAlignment="Top" Width="112" Click="Button_Click" Background="#00131313" BorderBrush="{x:Null}" Foreground="#19A5A5A5" FontSize="11" Cursor="Hand" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
