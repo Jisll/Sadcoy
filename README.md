@@ -3,10 +3,6 @@
 `Sadcoy` is a simple made 1-click optimizer and open-source project! it is designed to improve performance and latency in games and enhance your gaming experience.
 This software is still under development, many features will be added, if you have any ideas write us! Support and more is appreciated, any help will help us to develop this app further.
 
-### ⚠️ INSTALL REQUIRED ###
-
-* This project uses the font  [Poppins-Semibold](https://cdn.discordapp.com/attachments/927291995947413515/993565082103599115/Poppins-SemiBoldItalic.ttf) click to install it for a better experience.
-
 <p align="center">
 		<img src="https://cdn.discordapp.com/attachments/927291995947413515/995328678399594506/sadcoyoptimizer.png">
 	</a>
