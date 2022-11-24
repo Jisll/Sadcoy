@@ -526,6 +526,40 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="nameofcomputer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="services">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.9">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <QuarticEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="StarMeAnimationBegin">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="SupportMe">
@@ -616,36 +650,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Storyboard x:Key="ButtonAnimationEnter"/>
-        <Storyboard x:Key="ButtonAnimationLeave"/>
-        <Storyboard x:Key="TextBlockAnimationEnter">
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock4">
-                <EasingThicknessKeyFrame KeyTime="0" Value="278,150,278,0">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="278,140,278,0">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-            </ThicknessAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="TextBlockAnimationLeave">
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock4">
-                <EasingThicknessKeyFrame KeyTime="0" Value="278,140,278,0">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="278,150,278,0">
-                    <EasingThicknessKeyFrame.EasingFunction>
-                        <QuarticEase EasingMode="EaseInOut"/>
-                    </EasingThicknessKeyFrame.EasingFunction>
-                </EasingThicknessKeyFrame>
-            </ThicknessAnimationUsingKeyFrames>
-        </Storyboard>
         <Storyboard x:Key="convertnormalanimationstart">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="button">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">
@@ -702,8 +706,6 @@
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource Startup}"/>
-            <BeginStoryboard x:Name="TextBlockAnimationEnter_BeginStoryboard" Storyboard="{StaticResource TextBlockAnimationEnter}"/>
-            <BeginStoryboard x:Name="TextBlockAnimationLeave_BeginStoryboard" Storyboard="{StaticResource TextBlockAnimationLeave}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button">
             <BeginStoryboard x:Name="convertnormalanimationstart_BeginStoryboard" Storyboard="{StaticResource convertnormalanimationstart}"/>
@@ -716,12 +718,6 @@
         </EventTrigger>
         <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="SupportMe">
             <BeginStoryboard x:Name="StarMeAnimationStop_BeginStoryboard" Storyboard="{StaticResource StarMeAnimationStop}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="textBlock4">
-            <BeginStoryboard x:Name="TextBlockAnimationEnter_BeginStoryboard1" Storyboard="{StaticResource TextBlockAnimationEnter}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="textBlock4">
-            <BeginStoryboard x:Name="TextBlockAnimationLeave_BeginStoryboard1" Storyboard="{StaticResource TextBlockAnimationLeave}"/>
         </EventTrigger>
     </Window.Triggers>
     <Grid x:Name="grid">
@@ -785,7 +781,7 @@
                 <DropShadowEffect ShadowDepth="0" RenderingBias="Quality" BlurRadius="10" Color="#FF131313"/>
             </Border.Effect>
         </Border>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="146" Width="244" Foreground="#FFA5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="14" TextAlignment="Center" FontWeight="Normal" Margin="284.5,150,262.5,0" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="151" Width="244" Foreground="#FFA5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="16" TextAlignment="Center" FontWeight="Normal" Margin="285,148.654,0,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -794,7 +790,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="Sadcoy is designed to improve performance and latency in games to enhance your gaming experience."/><LineBreak/><Run Text="This is an early alpha version, we are open for improvements and suggestions."/></TextBlock>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="WELCOME TO SADCOY" VerticalAlignment="Top" Height="31" Width="244" Foreground="White" FontSize="20" Margin="284.5,98,262.5,0" FontWeight="Normal" TextAlignment="Center" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="WELCOME TO SADCOY" VerticalAlignment="Top" Height="31" Width="644" Foreground="White" FontSize="20" Margin="84,68,0,0" FontWeight="Normal" TextAlignment="Center" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -813,7 +809,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="© 2022 Sadcoy, Inc"/><Run Language="de-de" Text="."/></TextBlock>
-        <Button Style="{DynamicResource ExitButton}" x:Name="Exit" Content="&#xF13D;" Margin="690,44,63,0" VerticalAlignment="Top" Height="26" Foreground="#FF444444" BorderBrush="{x:Null}" Background="#FF131313" FontFamily="Segoe Fluent Icons" FontSize="24" Click="Exit_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
+        <Button Style="{DynamicResource ExitButton}" x:Name="Exit" Content="&#xF13D;" Margin="700,44,63,0" VerticalAlignment="Top" Height="26" Foreground="#FF444444" BorderBrush="{x:Null}" Background="#FF131313" FontFamily="Segoe Fluent Icons" FontSize="24" Click="Exit_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -832,7 +828,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="SADCOY"/><Run Language="de-de" Text=" [BETA]"/></TextBlock>
-        <Button Style="{DynamicResource ConvertNormal}" x:Name="SupportMe" Content="Star Me!" HorizontalAlignment="Left" Margin="634,48,0,0" VerticalAlignment="Top" Background="#FF131313" BorderBrush="{x:Null}" Foreground="#FF444444" FontFamily="Yu Gothic UI Semibold" Click="SupportMe_Click" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
+        <Button Style="{DynamicResource ConvertNormal}" x:Name="SupportMe" Content="Star Me!" HorizontalAlignment="Left" Margin="647,48,0,0" VerticalAlignment="Top" Background="#FF131313" BorderBrush="{x:Null}" Foreground="#FF444444" FontFamily="Yu Gothic UI Semibold" Click="SupportMe_Click" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -852,7 +848,29 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="accept" Margin="318,312,296,95" BorderBrush="{x:Null}" Background="#00171717" Foreground="White" FontSize="14" FontFamily="Yu Gothic UI Semibold" Click="RunSw_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="RUN OPTIMIZER" Cursor="Hand">
+        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="accept" Margin="322.5,325.654,0,0" BorderBrush="{x:Null}" Background="#00171717" Foreground="White" FontSize="14" FontFamily="Yu Gothic UI Semibold" Click="RunSw_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="RUN OPTIMIZER" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="169">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF7DFF00" BlurRadius="100" Opacity="0.2"/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock x:Name="nameofcomputer" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="645" Foreground="White" FontSize="20" Margin="84,99,0,0" FontWeight="Normal" TextAlignment="Center" FontFamily="Yu Gothic UI" RenderTransformOrigin="0.5,0.5" Initialized="nameofcomputer_Initialized">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="de-de" Text="NAME"/></TextBlock>
+        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="services" Margin="358,374,0,0" BorderBrush="{x:Null}" Background="#00171717" Foreground="White" FontSize="14" FontFamily="Yu Gothic UI Semibold" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="Services" Cursor="Hand" Height="24.63" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96" Click="services_Click" Opacity="0.7">
             <Button.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF7DFF00" BlurRadius="100" Opacity="0.2"/>
             </Button.Effect>
