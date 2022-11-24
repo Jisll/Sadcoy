@@ -59,7 +59,14 @@ namespace Sadcoy
 
                 }
             }
-            MessageBox.Show("Optimizing finished", "Sadcoy");
+            if (MessageBox.Show("You need to restart the computer to apply the effects, do you want to restart now?", "Sadcoy", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+            {
+                Process.Start("shutdown.exe", "-r -t 00");
+            }
+            else
+            {
+                // nothing
+            }
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -74,5 +81,27 @@ namespace Sadcoy
                 FileName = "https://github.com/Jisll/Sadcoy",
                 UseShellExecute = true
             });
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Optimize.ConvertToNormal();
+            if (MessageBox.Show("You need to restart the computer to convert the effects, do you want to restart now?", "Sadcoy", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+            {
+                Process.Start("shutdown.exe", "-r -t 00");
+            }
+            else
+            {
+                // nothing
+            }
+        }
+
+        private void nameofcomputer_Initialized(object sender, EventArgs e)
+            => nameofcomputer.Text = (System.Environment.MachineName);
+
+        private void services_Click(object sender, RoutedEventArgs e)
+        {
+            Services sv = new Services();
+            sv.Show();
+        }
     }
 }
