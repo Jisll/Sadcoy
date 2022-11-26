@@ -67,6 +67,11 @@ This software is still under development, many features will be added, if you ha
 
 <hr>
 
+## 📰 Changelog
+- https://github.com/Jisll/Sadcoy/blob/main/CHANGELOG.md
+
+<hr>
+
 ## 💻 Compatibility:
 
 * .NET Framework 4.8
