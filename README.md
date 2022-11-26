@@ -41,7 +41,7 @@ This software is still under development, many features will be added, if you ha
 ### 💧Optimizes System Settings ###
 - Delays
 - Menu
-- Removes Watermark (Windows 11)
+- VBS
 
 <hr>
 
