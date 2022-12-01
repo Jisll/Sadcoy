@@ -26,6 +26,7 @@ namespace Sadcoy
 
         private void RunSw_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Optimizing started!");
             Optimize.Optimizing();
             string TempPath = System.IO.Path.GetTempPath();
             var Dir = new DirectoryInfo(TempPath);
