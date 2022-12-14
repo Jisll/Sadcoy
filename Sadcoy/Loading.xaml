@@ -1,4 +1,4 @@
-﻿<Window x:Class="Sadcoy.Loading"
+<Window x:Class="Sadcoy.Loading"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -774,7 +774,7 @@
                 <DropShadowEffect ShadowDepth="0" BlurRadius="10"/>
             </Border.Effect>
         </Border>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="244" Foreground="#FFA5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="14" FontWeight="Normal" Margin="0,132,0,0" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="244" Foreground="#FFAFAFAF" FontFamily="Yu Gothic UI Semibold" FontSize="14" FontWeight="Normal" Margin="0,132,0,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -783,7 +783,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="Sadcoy changes "/><Run Text="your Windows,"/><LineBreak/><Run Text="watch what you do"/><Run Language="de-de" Text="."/></TextBlock>
-        <TextBlock x:Name="textBlock4_Copy" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="244" Foreground="#FFA5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="20" TextAlignment="Center" Margin="0,88,0,0" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock4_Copy" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="244" Foreground="#FFAFAFAF" FontFamily="Yu Gothic UI Semibold" FontSize="20" TextAlignment="Center" Margin="0,88,0,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -792,7 +792,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Language="de-de" Text="Welcome to Sadcoy"/></TextBlock>
-        <TextBlock x:Name="textBlock4_Copy1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="244" Foreground="#FFA5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="14" FontWeight="Normal" Margin="0,207,0,0" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="textBlock4_Copy1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="244" Foreground="#FFAFAFAF" FontFamily="Yu Gothic UI Semibold" FontSize="14" FontWeight="Normal" Margin="0,207,0,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -810,7 +810,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </TextBlock.RenderTransform><Run Text="Please note that Sadcoy"/><LineBreak/><Run Text="is not responsible "/><Run Language="de-de" Text="for anything."/></TextBlock>
-        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="accept" Margin="336,337,336,85" BorderBrush="{x:Null}" Background="#00171717" Foreground="White" FontSize="14" FontFamily="Yu Gothic UI Semibold" Click="RunSw_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="Accept" Cursor="Hand">
+        <Button Style="{DynamicResource RunOptimizerHover}" x:Name="accept" Margin="336,337,336,85" BorderBrush="{x:Null}" Background="#00171717" Foreground="#FFAFAFAF" FontSize="14" FontFamily="Yu Gothic UI Semibold" Click="RunSw_Click" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Content="Accept" Cursor="Hand">
             <Button.Effect>
                 <DropShadowEffect ShadowDepth="0" Color="#FF98F73C" BlurRadius="100" Opacity="0.2"/>
             </Button.Effect>
