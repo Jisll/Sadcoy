@@ -40,7 +40,7 @@ namespace Sadcoy
 
         private void version_Initialized(object sender, EventArgs e)
         {
-            string othermessage = "Version 1.0.4";
+            string othermessage = "Version 1.0.5";
 
             version.Text = othermessage;
         }
