@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,15 +15,9 @@ using System.Windows.Shapes;
 
 namespace Sadcoy
 {
-    /// <summary>
-    /// Interaktionslogik für Services.xaml
-    /// </summary>
     public partial class Services : Window
     {
-        public Services()
-        {
-            InitializeComponent();
-        }
+        public Services() => InitializeComponent();
 
         private void ExitMethod(object sender, EventArgs e)
             => this.Close();
