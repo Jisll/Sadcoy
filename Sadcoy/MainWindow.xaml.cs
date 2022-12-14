@@ -95,10 +95,6 @@ namespace Sadcoy
                 // nothing
             }
         }
-
-        private void nameofcomputer_Initialized(object sender, EventArgs e)
-            => nameofcomputer.Text = (System.Environment.MachineName);
-
         private void services_Click(object sender, RoutedEventArgs e)
         {
             Services sv = new Services();
