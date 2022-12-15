@@ -1,6 +1,10 @@
-## 0.1.4 (November 25, 2022)
+## 0.1.5 (Dezember 14, 2022)
 
-### Sadcoy
+* Improved: MainWindow
+* Improved: Color of MainWindow, Loading
+* Improved: MainWindow Code, Loading Code, Service Cod
+
+## 0.1.4 (November 25, 2022)
 
 * Disable the unnecessary services with `Utilities.StopService("Service");`.
 * Sadcoy does not close completely was fixed and a new method was added.
