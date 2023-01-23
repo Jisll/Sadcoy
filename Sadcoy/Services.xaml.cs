@@ -137,7 +137,6 @@ namespace Sadcoy
 
         static void ClearCache()
         {
-            // Dieser Befehl leert den Cache vom RAM und setzt die verfügbaren Ressourcen zurück.
             GC.Collect();
         }
     }
