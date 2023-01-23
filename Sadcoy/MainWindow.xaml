@@ -551,7 +551,7 @@
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-3">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -569,10 +569,14 @@
                     </EasingColorKeyFrame.EasingFunction>
                 </EasingColorKeyFrame>
             </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="SupportMe">
+                <EasingColorKeyFrame KeyTime="0" Value="#00131313"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FF131313"/>
+            </ColorAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="StarMeAnimationStop">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="SupportMe">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-3">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -640,7 +644,7 @@
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="5">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-3">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -652,7 +656,7 @@
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingColorKeyFrame.EasingFunction>
                 </EasingColorKeyFrame>
-                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#1998F73C">
+                <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#8C98F73C">
                     <EasingColorKeyFrame.EasingFunction>
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingColorKeyFrame.EasingFunction>
@@ -661,7 +665,7 @@
         </Storyboard>
         <Storyboard x:Key="convernormalanimationend">
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="button">
-                <EasingColorKeyFrame KeyTime="0" Value="#1998F73C">
+                <EasingColorKeyFrame KeyTime="0" Value="#8C98F73C">
                     <EasingColorKeyFrame.EasingFunction>
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingColorKeyFrame.EasingFunction>
@@ -673,7 +677,7 @@
                 </EasingColorKeyFrame>
             </ColorAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="button">
-                <EasingDoubleKeyFrame KeyTime="0" Value="5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-3">
                     <EasingDoubleKeyFrame.EasingFunction>
                         <QuarticEase EasingMode="EaseInOut"/>
                     </EasingDoubleKeyFrame.EasingFunction>
@@ -764,6 +768,15 @@
                 <DropShadowEffect ShadowDepth="0" RenderingBias="Quality" BlurRadius="10" Color="#FF131313"/>
             </Border.Effect>
         </Border>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="80" Foreground="#19A5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="96,50.08,0,0" RenderTransformOrigin="0.66,-0.147">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="SADCOY"/><Run Language="de-de" Text=" [BETA]"/></TextBlock>
         <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="151" Width="244" Foreground="#FF4A4A4A" FontFamily="Yu Gothic UI Semibold" FontSize="16" TextAlignment="Center" FontWeight="Normal" Margin="284,135,0,0" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
@@ -802,15 +815,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="80" Foreground="#19A5A5A5" FontFamily="Yu Gothic UI Semibold" FontSize="11" TextAlignment="Left" FontWeight="Normal" Margin="96,50.08,0,0" RenderTransformOrigin="0.66,-0.147">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform><Run Text="SADCOY"/><Run Language="de-de" Text=" [BETA]"/></TextBlock>
         <Button Style="{DynamicResource ConvertNormal}" x:Name="SupportMe" Content="Star Me!" HorizontalAlignment="Left" Margin="647,48,0,0" VerticalAlignment="Top" Background="#FF131313" BorderBrush="{x:Null}" Foreground="#FF444444" FontFamily="Yu Gothic UI Semibold" Click="SupportMe_Click" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
             <Button.RenderTransform>
                 <TransformGroup>
