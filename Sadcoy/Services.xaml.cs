@@ -1,4 +1,5 @@
 using System;
+using System.Web;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -70,7 +71,7 @@ namespace Sadcoy
 
         private void Version_Initialized(object sender, EventArgs e)
         {
-            string versionNumber = "1.0.4";
+            string versionNumber = "1.0.6";
 
             Version1.Text = versionNumber;
         }
@@ -106,6 +107,38 @@ namespace Sadcoy
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+        private void ClearCacheButton_Click(object sender, RoutedEventArgs e)
+        {
+            long before = GC.GetTotalMemory(false);
+            ClearCache();
+            long after = GC.GetTotalMemory(true);
+
+            long freed = before - after;
+
+            string message = "";
+            if (freed > 1073741824) // 1 GB = 1073741824 Bytes
+            {
+                double freedGB = (double)freed / 1073741824;
+                message = string.Format("Cache vom RAM wurde um {0:0.00} GB freigegeben.", freedGB);
+            }
+            else if (freed > 1048576) // 1 MB = 1048576 Bytes
+            {
+                double freedMB = (double)freed / 1048576;
+                message = string.Format("Cache vom RAM wurde um {0:0.00} MB freigegeben.", freedMB);
+            }
+            else
+            {
+                message = string.Format("Cache vom RAM wurde um {0} Bytes freigegeben.", freed);
+            }
+
+            MessageBox.Show(message, "Cache vom RAM freigegeben", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        static void ClearCache()
+        {
+            // Dieser Befehl leert den Cache vom RAM und setzt die verfügbaren Ressourcen zurück.
+            GC.Collect();
         }
     }
 }
