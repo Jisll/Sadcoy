@@ -22,6 +22,7 @@ This software is still under development, many features will be added, if you ha
 * Disable unnecessary Windows Functions
 * Disable Windows telemetry, Cortana and many more
 * Cleaning Temp Files
+* Clean-RAM Cache
 
 <hr>
 
@@ -82,4 +83,3 @@ This software is still under development, many features will be added, if you ha
 ## ⚠️ WARNING
 
 * This project is not allowed to steal or use for other projects! For a use of this project open an issue!
-
