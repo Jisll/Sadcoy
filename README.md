@@ -22,6 +22,7 @@ This software is still under development, many features will be added, if you ha
 * Disable unnecessary Windows Functions
 * Disable Windows telemetry, Cortana and many more
 * Cleaning Temp Files
+* Disable Windows Services
 * Clean-RAM Cache
 
 <hr>
