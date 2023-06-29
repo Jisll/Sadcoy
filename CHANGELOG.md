@@ -1,4 +1,15 @@
-## 0.1.5 (Dezember 14, 2022)
+## 0.1.7 (June 29, 2023)
+
+* New: Log File (After Finishing the Optimization)
+* New: Progess Bar in Optimization
+  
+## 0.1.6 (December 14, 2022)
+
+* New: Clear-RAM Cache (in Services)
+* Improved: Animations (ConvertToNormal, Services)
+* Improved: Services Tab
+  
+## 0.1.5 (December 14, 2022)
 
 * Improved: MainWindow
 * Improved: Color of MainWindow, Loading
