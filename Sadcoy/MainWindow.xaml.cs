@@ -1,58 +1,107 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Sadcoy
 {
     public partial class MainWindow : Window
     {
+        private string logFilePath = "Log.txt";
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void RunSw_Click(object sender, RoutedEventArgs e)
+        private async void RunSw_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Optimizing started!");
-            Optimize.Optimizing();
-            string tempPath = System.IO.Path.GetTempPath();
-            var dir = new DirectoryInfo(tempPath);
-
-            if (!dir.Exists)
+            if (MessageBox.Show("Do you want to optimize your system now?", "Sadcoy", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
-                MessageBox.Show("Can't Find Temp Folder");
-                return;
+                MessageBox.Show("Optimizing started!");
+
+                string tempPath = Path.GetTempPath();
+                var dir = new DirectoryInfo(tempPath);
+
+                if (!dir.Exists)
+                {
+                    MessageBox.Show("Can't find Temp folder");
+                    return;
+                }
+
+                ProgressBar.Visibility = Visibility.Visible;
+                ProgressBar.Value = 0;
+                ProgressTextBlock.Text = "Optimizing system...";
+                await Task.Run(() => OptimizeSystem());
+
+                ProgressTextBlock.Dispatcher.Invoke(() =>
+                {
+                    ProgressTextBlock.Text = "Clearing temporary folder...";
+                });
+
+                await Task.Run(() => ClearTempFolder(dir));
+
+                if (MessageBox.Show("You need to restart the computer to apply the effects. Do you want to restart now?", "Sadcoy", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+                {
+                    ProgressTextBlock.Dispatcher.Invoke(() =>
+                    {
+                        ProgressTextBlock.Text = "Restarting computer...";
+                    });
+                    await Task.Run(() => RestartComputer());
+                }
+                else
+                {
+                    MessageBox.Show("Restart the computer later to apply the effects!");
+                }
+
+                ProgressBar.Dispatcher.Invoke(() =>
+                {
+                    ProgressBar.Visibility = Visibility.Hidden;
+                });
+                ProgressTextBlock.Dispatcher.Invoke(() =>
+                {
+                    ProgressTextBlock.Text = "";
+                });
+                CreateLogFile();
             }
+        }
+        private void CreateLogFile()
+        {
+            string logContent = $"Optimization completed: {DateTime.Now}\n";
+            logContent += $"- Cleared temporary folder\n";
+            logContent += $"- System optimized\n";
+            logContent += $"- Restarted computer\n";
 
-            ClearTempFolder(dir);
-
-            if (MessageBox.Show("You need to restart the computer to apply the effects, do you want to restart now?", "Sadcoy", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+            try
             {
-                Process.Start("shutdown.exe", "-r -t 00");
+                File.WriteAllText(logFilePath, logContent);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error creating log file: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void ClearTempFolder(DirectoryInfo dir)
         {
+            double totalItems = dir.GetDirectories().Length + dir.GetFiles().Length;
+            double progress = 0;
+
             foreach (DirectoryInfo subDir in dir.GetDirectories())
             {
                 try
                 {
                     subDir.Delete(true);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    // Ignore
+                    LogError("Error deleting subdirectory: " + ex.Message);
                 }
+
+                progress++;
+                UpdateProgressBar(progress / totalItems, $"Deleting subdirectories... {progress}/{totalItems}");
             }
 
             foreach (FileInfo file in dir.GetFiles())
@@ -61,10 +110,39 @@ namespace Sadcoy
                 {
                     file.Delete();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    // Ignore
+                    LogError("Error deleting file: " + ex.Message);
                 }
+
+                progress++;
+                UpdateProgressBar(progress / totalItems, $"Deleting files... {progress}/{totalItems}");
+            }
+        }
+
+        private void OptimizeSystem()
+        {
+            try
+            {
+                Optimize.Optimizing();
+            }
+            catch (Exception ex)
+            {
+                LogError("Error optimizing system: " + ex.Message);
+            }
+
+            UpdateProgressBar(1, "Optimization complete!");
+        }
+
+        private void RestartComputer()
+        {
+            try
+            {
+                Process.Start("shutdown.exe", "-r -t 00");
+            }
+            catch (Exception ex)
+            {
+                LogError("Error restarting computer: " + ex.Message);
             }
         }
 
@@ -75,7 +153,7 @@ namespace Sadcoy
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            DragMove();
         }
 
         private void SupportMe_Click(object sender, RoutedEventArgs e)
@@ -86,9 +164,9 @@ namespace Sadcoy
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Optimize.ConvertToNormal();
-            if (MessageBox.Show("You need to restart the computer to convert the effects, do you want to restart now?", "Sadcoy", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
+            if (MessageBox.Show("You need to restart the computer to convert the effects. Do you want to restart now?", "Sadcoy", MessageBoxButton.OKCancel, MessageBoxImage.Warning) == MessageBoxResult.OK)
             {
-                Process.Start("shutdown.exe", "-r -t 00");
+                RestartComputer();
             }
         }
 
@@ -96,6 +174,34 @@ namespace Sadcoy
         {
             Services sv = new Services();
             sv.Show();
+        }
+
+        private void LogError(string errorMessage)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("ErrorLog.txt", true))
+                {
+                    writer.WriteLine(errorMessage + " " + DateTime.Now);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error writing to error log: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void UpdateProgressBar(double progress, string progressText)
+        {
+            progress = Math.Max(0, Math.Min(progress * 100, 100));
+            ProgressBar.Dispatcher.Invoke(() =>
+            {
+                ProgressBar.Value = progress;
+            });
+            ProgressTextBlock.Dispatcher.Invoke(() =>
+            {
+                ProgressTextBlock.Text = progressText;
+            });
         }
     }
 }

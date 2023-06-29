@@ -861,5 +861,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <ProgressBar x:Name="ProgressBar" Value="0" Maximum="100" HorizontalAlignment="Left" Width="200" Margin="306,302,0,142" Foreground="#FF57FF76" BorderBrush="{x:Null}" Background="#FF1F1F1F" Visibility="Hidden"/>
+        <TextBlock x:Name="ProgressTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="356,284,0,0" FontWeight="Bold" Foreground="#FFAFAFAF" TextAlignment="Center"/>
     </Grid>
 </Window>

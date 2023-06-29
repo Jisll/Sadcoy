@@ -1,4 +1,4 @@
-using Microsoft.SqlServer.Server;
+﻿using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +15,15 @@ using System.Windows.Shapes;
 
 namespace Sadcoy
 {
+    /// <summary>
+    /// Interaktionslogik für Loading.xaml
+    /// </summary>
     public partial class Loading : Window
     {
-        public Loading() => InitializeComponent();
+        public Loading()
+        {
+            InitializeComponent();
+        }
 
         private void RunSw_Click(object sender, RoutedEventArgs e)
         {
