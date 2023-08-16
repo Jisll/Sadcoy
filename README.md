@@ -1,4 +1,4 @@
-## Want the Perfect Windows? Looks at [this](https://github.com/Jisll/windows11)!
+## Want the Perfect Windows? Look at [this](https://github.com/Jisll/windows11)!
 
 # 👋 Introducing `Sadcoy` ![Downloads](https://img.shields.io/github/downloads/jisll/Sadcoy/total.svg?style=for-the-badge&logo=appveyor) <3
 
