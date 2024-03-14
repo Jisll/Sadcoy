@@ -8,7 +8,7 @@ Welcome to Sadcoy, an open-source project aimed at optimizing performance and re
 
 We would sincerely appreciate your support and contributions, as they will enable us to further enhance this application. Your help is invaluable in our journey to develop and deliver a top-notch gaming optimization tool.
 <p align="center">
-		<img src="https://cdn.discordapp.com/attachments/927291995947413515/1049836598600147064/sadcoyoptimizer.png">
+		<img src="https://cdn.discordapp.com/attachments/1071149320159641651/1217940572237598990/optimizer.png?ex=6605da8c&is=65f3658c&hm=7d8d6dc46c86c74c98a16ef0c8068517eec0dd406a4ebca5d01779839da86c24&">
 	</a>
 </p> 
 
